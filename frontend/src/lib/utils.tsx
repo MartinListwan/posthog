@@ -735,10 +735,10 @@ export function compactNumber(value: number, maxDecimals: number = 1): string {
     */
     if (value < 1000) {
         return Math.floor(value).toString()
-    } else if (value < 1000000) {
+    } else if (value < 1_000_000) {
         return suffixFormatted(value, 1000, 'K', maxDecimals)
-    } else if (value < 1000000000) {
-        return suffixFormatted(value, 1000000, 'M', maxDecimals)
+    } else if (value < 1_000_000_000) {
+        return suffixFormatted(value, 1_000_000, 'M', maxDecimals)
     }
-    return suffixFormatted(value, 1000000000, 'B', maxDecimals)
+    return suffixFormatted(value, 1_000_000_000, 'B', maxDecimals)
 }
